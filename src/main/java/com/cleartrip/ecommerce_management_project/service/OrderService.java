@@ -1,0 +1,9 @@
+package com.cleartrip.ecommerce_management_project.service;
+
+import com.cleartrip.ecommerce_management_project.model.Order;
+import com.cleartrip.ecommerce_management_project.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+public interface OrderService extends JpaRepository<Order, Long> {
+    List<Order> findByUserOrderByOrderDateDesc(User user);
+}

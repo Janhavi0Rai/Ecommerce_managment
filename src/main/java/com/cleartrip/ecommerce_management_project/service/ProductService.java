@@ -1,7 +1,6 @@
-package com.cleartrip.ecommerce_management_project.controller;
+package com.cleartrip.ecommerce_management_project.service;
 
 import com.cleartrip.ecommerce_management_project.model.Product;
-import com.cleartrip.ecommerce_management_project.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +12,7 @@ import org.springframework.data.domain.Page;
 
 @RestController
 @RequestMapping("/api/products")
-public class ProductController {
+public class ProductService {
     @Autowired
     private ProductService productService;
 
