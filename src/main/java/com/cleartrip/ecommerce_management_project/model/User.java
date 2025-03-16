@@ -1,4 +1,4 @@
-package com.cleartrip.ecommerce_management_project.Entity;
+package com.cleartrip.ecommerce_management_project.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.cleartrip.ecommerce_management_project.Entity;
+package com.cleartrip.ecommerce_management_project.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
