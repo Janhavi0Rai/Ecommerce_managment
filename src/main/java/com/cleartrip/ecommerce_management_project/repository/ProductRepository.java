@@ -7,6 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import java.util.List;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByNameContainingIgnoreCase(String name);
     List<Product> findByCategoryIgnoreCase(String category);
@@ -26,4 +29,14 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
             @Param("maxPrice") Double maxPrice,
             Pageable pageable
     );
+
+    List<Product> findByCategory(String category);
+    
+    Page<Product> findByCategory(String category, Pageable pageable);
+    
+    List<Product> findByCategoryAndPriceBetween(String category, Double minPrice, Double maxPrice);
+    
+    Page<Product> findByCategoryAndPriceBetween(String category, Double minPrice, Double maxPrice, Pageable pageable);
+
+    Page<Product> findByPriceBetween(Double minPrice, Double maxPrice, Pageable pageable);
 }

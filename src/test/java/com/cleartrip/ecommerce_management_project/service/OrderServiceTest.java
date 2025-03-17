@@ -1,7 +1,7 @@
 package com.cleartrip.ecommerce_management_project.service;
 
 import com.cleartrip.ecommerce_management_project.model.*;
-import com.cleartrip.ecommerce_management_project.repository.OrderItemRepository;
+
 import com.cleartrip.ecommerce_management_project.repository.OrderRepository;
 import com.cleartrip.ecommerce_management_project.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,8 +31,7 @@ public class OrderServiceTest {
     @Mock
     private OrderRepository orderRepository;
 
-    @Mock
-    private OrderItemRepository orderItemRepository;
+
 
     @Mock
     private UserRepository userRepository;

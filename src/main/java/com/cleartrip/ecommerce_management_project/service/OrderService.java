@@ -4,6 +4,8 @@ package com.cleartrip.ecommerce_management_project.service;
 import com.cleartrip.ecommerce_management_project.model.*;
 import com.cleartrip.ecommerce_management_project.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
@@ -23,6 +25,22 @@ public class OrderService {
     @Autowired
     private InventoryService inventoryService;
 
+    public Page<Order> getUserOrders(long userId, int page, int size) {
+        // Implementation logic to retrieve user orders
+        return new PageImpl<>(new ArrayList<>()); // Replace with actual implementation
+    }
+
+
+    public Optional<Order> updateOrderStatus(long orderId, OrderStatus status) {
+        // Implementation logic to update order status
+        return Optional.empty(); // Replace with actual implementation
+    }
+
+
+    public Optional<Order> cancelOrder(long orderId) {
+        // Implementation logic to cancel order
+        return Optional.empty(); // Replace with actual implementation
+    }
     // order place kr rhe
     @Transactional
     public Optional<Order> placeOrder(User user) {
@@ -46,6 +64,8 @@ public class OrderService {
             order.setTotalAmount(totalAmount);
             order.setStatus(OrderStatus.PENDING);
             order.setItems(new ArrayList<>());
+
+
 
             // order items create kr rhe and inventory update kr rhe
             for (CartItem cartItem : cart.getItems()) {

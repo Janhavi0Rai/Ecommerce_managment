@@ -4,7 +4,6 @@ import com.cleartrip.ecommerce_management_project.model.Cart;
 import com.cleartrip.ecommerce_management_project.model.CartItem;
 import com.cleartrip.ecommerce_management_project.model.Product;
 import com.cleartrip.ecommerce_management_project.model.User;
-import com.cleartrip.ecommerce_management_project.repository.CartItemRepository;
 import com.cleartrip.ecommerce_management_project.repository.CartRepository;
 import com.cleartrip.ecommerce_management_project.repository.ProductRepository;
 import com.cleartrip.ecommerce_management_project.repository.UserRepository;
@@ -30,8 +29,6 @@ public class CartServiceTest {
     @Mock
     private CartRepository cartRepository;
 
-    @Mock
-    private CartItemRepository cartItemRepository;
 
     @Mock
     private ProductRepository productRepository;
